@@ -1,0 +1,195 @@
+ @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Rampart+One&display=swap"); 
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Rampart One, Allison, sans-serif;
+  background-color: #fde2e4;
+  background-image: url(../Images/pexels-min-an-813269.jpg);
+  background-position: center;
+  background-size: cover;
+ 
+}
+
+h1 {
+  color: #fff;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  text-transform: capitalize;
+  text-align: center;
+  width: 475px;
+  border-radius: 25px;
+  margin: 20px auto 20px;
+  user-select: none;
+}
+
+h1:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+/* Bookmarks */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 10px;
+  font-family: Allison, sans-serif;
+  padding: 20px;
+  margin: 10px;
+}
+
+.item:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+a {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.fa-times {
+  float: right;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.name {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.name img {
+  height: 20px;
+  width: 20px;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+/* Modal */
+.modal-container {
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  max-width: 95%;
+  width: 500px;
+  font-family: Allison, sans-serif;
+  animation: modalopen 1s;
+}
+
+.close-icon {
+  float: right;
+  color: #fff;
+  font-size: 1.5rem;
+  position: relative;
+  top: 13px;
+  right: 13px;
+  cursor: pointer;
+}
+
+.modal-header {
+  background: #f28482;
+  color: #fff;
+  padding: 15px;
+}
+
+h3 {
+  margin: 0;
+}
+.modal-content {
+  padding: 20px;
+  background: rgb(0, 0, 0);
+}
+
+/* Form */
+.from-group {
+  height: 55px;
+}
+
+.form-label {
+  color: #f28482;
+  display: block;
+  font-weight: bold;
+  margin: 5px;
+}
+.form-input {
+  width: 97%;
+  padding: 5px;
+  border: 2px solid #f28482;
+  border-radius: 25px;
+  outline: none;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  background: #f28482;
+  height: 30px;
+  width: 200px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 28%;
+}
+
+button:hover {
+  background: #ef233c;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .item {
+    width: 85%;
+  }
+  h1 {
+    width: 90%;
+  }
+}
